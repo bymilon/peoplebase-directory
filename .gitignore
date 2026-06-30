@@ -6,3 +6,13 @@ coverage/
 *.log
 .env*
 !.env.example
+.agents
+.marketing
+metadata.json
+.prompts
+.adr
+.sops
+.tasks
+assets\.aistudio
+fetch-skill.cjs
+.notes
