@@ -7,7 +7,7 @@ import MessageSentChart from './MessageSentChart';
 
 export default function Dashboard() {
   return (
-    <div className="max-w-[1200px] mx-auto space-y-6">
+    <div className="max-w-[1280px] mx-auto space-y-6">
       <KpiCards />
       
       <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-6">
