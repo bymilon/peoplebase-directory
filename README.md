@@ -1,124 +1,195 @@
 # PeopleBase Directory
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
-[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)]()
+> A compact React dashboard workspace for people, payroll, HR, reporting, and outreach analytics interfaces.
 
-> A modular, minimal, data-centric dashboard built with React, Vite, and Tailwind CSS.
-
-![Hero Image Placeholder](https://via.placeholder.com/1200x600?text=PeopleBase+Directory+Dashboard)
-
-**Repository**: [github.com/organization/peoplebase-directory](#) | **Documentation**: [`.wiki/`](.wiki/)
+PeopleBase Directory is a frontend-first dashboard scaffold built with React, Vite, TypeScript, Tailwind CSS, Lucide React, and Recharts. It is designed to be easy for engineers and AI coding agents to inspect, modify, and extend without hiding the product shape behind a large component framework.
 
 ## Definition
-PeopleBase Directory is a lightweight, frontend client-side application designed to serve as a clean starting point for dashboard interfaces and data visualizations.
+
+PeopleBase Directory is a client-side single-page application for dashboard and directory-style product experiences. The current workspace ships a PeopleBase-branded app shell with sidebar navigation, a sticky header, KPI cards, communication funnel charts, outreach conversion metrics, sequence activity, and message volume visualizations.
 
 ## Shareable Summary
-A dashboard boilerplate featuring a reusable Material Design 3 Navigation Rail, Recharts integrations, and an LLM-safe design system implemented with Tailwind CSS tokens.
 
-## What it is
-It is a production-ready Single Page Application (SPA) structured around a collapsible sidebar navigation, scalable data tables, and interactive charts. It relies on explicit, semantic Tailwind tokens rather than arbitrary values or hardcoded styles.
+A PeopleBase dashboard starter with a responsive navigation rail, TypeScript React components, Tailwind token styling, Recharts data visualizations, and an OKF-style `.wiki/` knowledge base for agent-assisted maintenance.
 
-## Why it exists
-Many dashboard templates suffer from bloat, vendor lock-in, or over-reliance on massive component libraries. PeopleBase Directory exists to provide a clean, accessible layout that is easy for both humans and AI coding agents to parse, modify, and extend without breaking the core design system.
+## What Is PeopleBase Directory?
 
-## Core Workflow
-1. **Component Extraction**: UI elements are built as pure, stateless React components, receiving all configuration via props.
-2. **Design Tokens**: Tailwind CSS variables drive all styling (`--color-brand-primary`, `--color-surface-light`) inside `src/index.css`.
-3. **Responsive Triage**: Mobile support is baked in, prioritizing accessible touch targets and proper flexbox constraints.
+PeopleBase Directory is not a backend HRIS, payroll processor, CRM, or employee database. It is the UI foundation for those kinds of internal tools.
 
-## Architecture Overview
-- **Framework**: React 18+ (Functional components & Hooks)
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS (Utility-first with semantic tokens)
-- **Icons**: Lucide React
-- **Visualizations**: Recharts
+The app currently focuses on the dashboard layer:
+
+- A collapsible sidebar with Home, Employees, Payroll, Reports, HR, and Workflow sections.
+- A main reports dashboard with KPI cards and analytics panels.
+- Reusable chart components built around Recharts.
+- A theme provider for light and dark UI modes.
+- Project knowledge files under `.wiki/` and design guidance in `DESIGN.md`.
+
+## Why PeopleBase Directory?
+
+Many dashboard templates start with heavy UI kits, generic sample sections, or undocumented design choices. PeopleBase Directory keeps the surface area small so the workspace can be adapted quickly while staying readable.
+
+The project is useful when you need:
+
+- A React/Vite dashboard shell that is already organized into practical components.
+- A UI that can be rebranded or connected to real people, payroll, HR, or reporting data.
+- A design system that is explicit enough for AI-assisted edits.
+- A repository structure that keeps product notes close to the code.
+
+## Architecture
+
+| Area | Current Choice |
+| --- | --- |
+| App model | Client-side React SPA |
+| Framework | React 19 with TypeScript |
+| Build tool | Vite 6 |
+| Styling | Tailwind CSS 4 with project tokens |
+| Icons | Lucide React |
+| Charts | Recharts |
+| Motion | Motion |
+| Type check | `tsc --noEmit` via `npm run lint` |
 
 ## Workspace Structure
+
 ```text
 .
-├── .wiki/                  # Open Knowledge Format (OKF) project second brain
-├── .prompts/               # Library of reusable prompts for AI agents
-├── sops/                   # Standard Operating Procedures for common tasks
+├── .prompts/               # Reusable prompts for agent workflows
+├── .wiki/                  # Project knowledge base and conventions
 ├── public/                 # Static assets
 ├── src/
-│   ├── components/         # Reusable UI modules (Sidebar, Header, etc.)
-│   ├── App.tsx             # Main application layout entry
-│   ├── index.css           # Global styles and Tailwind token definitions
-│   └── main.tsx            # React DOM mounting
-├── DESIGN.md               # Source of truth for the LLM-safe design system
-└── package.json            # Dependencies and scripts
+│   ├── components/         # Dashboard, sidebar, header, charts, and UI pieces
+│   ├── lib/                # Shared utilities
+│   ├── App.tsx             # Main application shell and navigation state
+│   ├── index.css           # Global styles and Tailwind tokens
+│   └── main.tsx            # React DOM entrypoint
+├── DESIGN.md               # Design-system guidance
+├── package.json            # Scripts and dependencies
+└── wrangler.json           # Cloudflare compatibility-date pin
 ```
 
 ## Quick Start
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/organization/peoplebase-directory.git
-   cd peoplebase-directory
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+cd peoplebase-directory
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the local development server:
+
+```bash
+npm run dev
+```
+
+Vite serves the app on port `3000` by default.
 
 ## Commands Overview
+
 | Command | Description |
-|---|---|
-| `npm run dev` | Starts the local development server on port 3000. |
-| `npm run build` | Compiles the application for production deployment. |
-| `npm run preview` | Previews the production build locally. |
-| `npm run lint` | Runs ESLint to verify code quality. |
+| --- | --- |
+| `npm run dev` | Starts Vite on `0.0.0.0:3000`. |
+| `npm run build` | Builds the production frontend into `dist/`. |
+| `npm run preview` | Serves the production build locally. |
+| `npm run lint` | Runs TypeScript checking with `tsc --noEmit`. |
+| `npm run clean` | Removes generated `dist` and `server.js` artifacts. |
 
 ## Examples
-- **Adding a new chart**: Create a new component using Recharts and drop it into the `Dashboard.tsx` grid layout.
-- **Adding a sidebar item**: Extend the `navItems` array in the parent component and pass it into the `Sidebar` via props.
 
-## Comparison
-| Feature | PeopleBase Directory | Typical Dashboard Templates |
-|---|---|---|
-| **Styling** | Native Tailwind tokens | Custom CSS or massive UI libraries |
-| **AI Compatibility** | Built for LLM parsing | Difficult for AI to maintain safely |
-| **Knowledge Base** | OKF-compliant `.wiki/` included | Scattered or non-existent docs |
-| **Responsiveness** | Mobile-first flex constraints | Desktop-focused |
+Add a chart:
 
-## Cost Control & Efficiency
-Because it relies entirely on client-side rendering and lightweight dependencies, it incurs minimal hosting costs. It is highly cacheable on CDNs.
+1. Create a component in `src/components/`.
+2. Use Recharts for the visualization layer.
+3. Mount it in `src/components/Dashboard.tsx`.
+4. Keep spacing, color, and typography aligned with `src/index.css` and `DESIGN.md`.
+
+Add a navigation item:
+
+1. Add a Lucide icon import in `src/App.tsx`.
+2. Extend the `navItems` array.
+3. Handle the selected state through `activeItemName`.
+
+Connect live data:
+
+1. Replace static component data with API-backed state.
+2. Keep API and transformation logic outside presentational chart components.
+3. Document new data contracts in `.wiki/` when they become stable.
+
+## PeopleBase Directory vs Typical Dashboard Templates
+
+| Concern | PeopleBase Directory | Typical Dashboard Templates |
+| --- | --- | --- |
+| Product shape | People, payroll, HR, reporting, and outreach dashboard shell | Generic admin screens |
+| Styling | Tailwind tokens and explicit local CSS | Large UI kit defaults or scattered custom CSS |
+| Charts | Focused Recharts components | Sample cards or vendor-specific widgets |
+| Agent maintenance | `.wiki/`, `.prompts/`, and `DESIGN.md` keep context near code | Context often lives outside the repo |
+| Backend assumptions | None by default | Often tied to a demo API or platform |
+
+## Cost Control
+
+The app is currently a static client-side frontend, so it can be hosted on low-cost static hosting or CDN-backed platforms. The repository does not require a long-running backend service unless one is added for real product data.
 
 ## Human Approval Gates
-When utilized with automated CI/CD or AI agents, it is recommended to require human review for changes affecting `DESIGN.md` or `.wiki/decisions/` to maintain the integrity of the design system.
 
-## Target Users
-- Frontend engineers needing a clean, unopinionated dashboard layout.
-- AI coding agents executing structured updates.
-- Product teams rapid-prototyping internal tools.
+Use human review for changes that affect:
 
-## Creator / Sponsor
-Maintained by the Engineering Team. 
+- `DESIGN.md`
+- `.wiki/` conventions or decisions
+- Global tokens in `src/index.css`
+- Navigation structure in `src/App.tsx`
+- Shared chart/data contracts
+
+Those files define how future changes should be made, so mistakes there can spread through the workspace.
+
+## Who PeopleBase Directory Is For
+
+- Frontend engineers who want a small React dashboard base.
+- Product teams prototyping internal people operations tools.
+- AI coding agents that need a readable component and knowledge structure.
+- Maintainers who prefer explicit local patterns over a large third-party dashboard framework.
 
 ## Roadmap
-- Dark mode toggle integration with local storage persistence.
-- Additional Recharts visualization templates (Scatter, Radar).
-- Backend integration hooks via a lightweight Express layer (if required).
 
-## Non-Goals
-- Full-scale custom backend out-of-the-box (unless explicitly required and configured in `server.ts`).
-- Supporting outdated browsers without modern CSS features.
-- Introducing a new, heavy component library.
+- Replace remaining mock/static chart data with documented data contracts.
+- Add real route handling for the sidebar sections.
+- Add a license file before public open-source release.
+- Add `CONTRIBUTING.md` and issue templates.
+- Add CI once local verification commands are stable.
+- Expand the dashboard with reusable employee, payroll, HR, and workflow views.
 
 ## FAQ
-**Is this tied to a specific backend?**
-No. It is a client-side SPA. You can connect it to any REST or GraphQL API.
 
-**Why use Tailwind tokens?**
-To ensure an LLM-safe design system where changes are made explicitly via variables (`var(--color-brand-primary)`), avoiding arbitrary magic hex codes spread throughout the codebase.
+### Is this a complete HR product?
+
+No. It is a frontend dashboard workspace. It can become part of an HR, payroll, or people operations product, but it does not ship production backend workflows by itself.
+
+### Is it tied to a backend?
+
+No. The current app is a client-side React SPA. You can connect it to REST, GraphQL, serverless functions, or another backend later.
+
+### Why keep `.wiki/` and `DESIGN.md`?
+
+They make design and maintenance decisions explicit. That helps humans review changes and helps AI agents avoid inventing new patterns when the repo already has guidance.
+
+### Can I deploy it to Cloudflare?
+
+The repository includes `wrangler.json` with a pinned compatibility date for Cloudflare tooling. The frontend still needs the appropriate build/deploy workflow for your target Cloudflare setup.
+
+### Is the project open-source ready?
+
+Not fully. The README is now structured for public use, but the repository still needs a committed license file, contribution guide, and release verification before it should be presented as a mature OSS project.
 
 ## Contributing
-Contributions are welcome. Please read the contribution guidelines in `.wiki/conventions.md` before opening a pull request. 
-Ensure you update the OKF knowledge base and SOPs when introducing new patterns.
+
+Contributions should make the workspace clearer, smaller, or easier to adapt.
+
+Before opening a pull request, review `DESIGN.md` and the relevant `.wiki/` notes. Update the knowledge base when a change introduces a durable pattern, data contract, or maintenance convention.
 
 ## License
-[MIT License](LICENSE)
+
+No license file is currently committed. Add one before publishing or accepting external contributions.
