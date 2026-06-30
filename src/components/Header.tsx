@@ -39,9 +39,11 @@ export default function Header({ onMenuClick }: { onMenuClick?: () => void }) {
             <ChevronDown className="w-[10px] h-[10px] text-gray-500 dark:text-gray-400" strokeWidth={3} />
           </div>
         </button>
-        <Button className="hidden md:inline-flex whitespace-nowrap min-h-[44px] shrink-0">
-          Upgrade plan
-        </Button>
+        <div className="hidden md:block shrink-0">
+          <Button className="whitespace-nowrap min-h-[44px] w-full">
+            Upgrade plan
+          </Button>
+        </div>
       </div>
     </header>
   );

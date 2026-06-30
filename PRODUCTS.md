@@ -28,7 +28,7 @@ To prevent feature creep, bloat, and architectural drift, AI agents **MUST** res
 When proposing, designing, or implementing new features, AI coding agents should follow this sequence:
 1. **Check Alignment**: Verify the requested feature aligns with the *Core Capabilities* and does not violate the *Product Boundaries*.
 2. **Consult the Design System**: Read `DESIGN.md` before generating any new UI components or layouts.
-3. **Use Established SOPs**: Refer to the `sops/` directory for validated patterns regarding UI component extraction and mobile responsiveness.
+3. **Use Established SOPs**: Refer to the `.sops/` directory for validated patterns regarding UI component extraction and mobile responsiveness.
 4. **Update Context**: If a major architectural or product decision is made, document it as an ADR in `.wiki/decisions/`.
 
 ## 6. Definition of Quality
