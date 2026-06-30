@@ -16,3 +16,4 @@ metadata.json
 assets\.aistudio
 fetch-skill.cjs
 .notes
+.wrangler
