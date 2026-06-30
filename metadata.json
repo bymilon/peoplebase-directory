@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "description": "",
+  "name": "PeopleBase Directory",
+  "description": "A dashboard application featuring a reusable Material Design 3 Navigation Rail and UI components.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

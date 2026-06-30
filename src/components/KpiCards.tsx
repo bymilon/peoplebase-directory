@@ -34,11 +34,11 @@ const kpis = [
 
 export default function KpiCards() {
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 border border-gray-200/80 dark:border-gray-800/60 rounded-2xl bg-white dark:bg-[#111827]/80 backdrop-blur-sm overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.04)] dark:shadow-[0_4px_16px_rgba(0,0,0,0.2)] transition-all duration-300">
+    <div className="grid grid-cols-2 lg:grid-cols-4 border border-gray-200 dark:border-gray-800 rounded-2xl bg-white dark:bg-slate-900 overflow-hidden shadow-sm transition-all duration-300">
       {kpis.map((kpi, index) => (
         <div
           key={kpi.title}
-          className={`p-5 md:p-6 flex flex-col border-gray-200/80 dark:border-gray-800/60 ${
+          className={`p-5 md:p-6 flex flex-col border-gray-200 dark:border-gray-800 ${
             index % 2 === 0 ? 'border-r' : ''
           } ${index < 2 ? 'border-b lg:border-b-0' : ''} ${
             index !== 3 ? 'lg:border-r' : 'lg:border-r-0'

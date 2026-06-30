@@ -5,8 +5,8 @@ const tableData = [
   {
     subject: 'Software Engineer',
     subjectIcon: MessageSquare,
-    subjectIconColor: 'text-[#5EC0E0]',
-    subjectIconBg: 'bg-[#E6F6FB] dark:bg-[rgba(94,192,224,0.12)]',
+    subjectIconColor: 'text-sky-500',
+    subjectIconBg: 'bg-sky-50 dark:bg-sky-500/10',
     senderName: 'Anthony beane',
     sent: 21,
     sentPercentage: 92,
@@ -20,8 +20,8 @@ const tableData = [
   {
     subject: 'Copywriter',
     subjectIcon: PenTool,
-    subjectIconColor: 'text-[#B06AF4]',
-    subjectIconBg: 'bg-[#F1E6FB] dark:bg-[rgba(176,106,244,0.12)]',
+    subjectIconColor: 'text-purple-500',
+    subjectIconBg: 'bg-purple-50 dark:bg-purple-500/10',
     senderName: 'Anthony beane',
     sent: 19,
     sentPercentage: 83,
@@ -40,7 +40,7 @@ export default function SequenceStepActivity() {
       <div className="p-4 md:p-6 flex items-center justify-between border-b border-gray-100 dark:border-gray-800/50">
         <h2 className="text-base font-semibold text-gray-900 dark:text-gray-100">Sequence step activity</h2>
         <div className="flex items-center gap-2">
-          <button className="hidden sm:flex items-center gap-2 px-3 py-1.5 border border-gray-200 dark:border-gray-800 rounded-lg text-sm text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-800 cursor-pointer">
+          <button className="hidden sm:flex items-center gap-2 px-3 py-1.5 border border-gray-200 dark:border-gray-800 rounded-lg text-sm text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors focus-ring-safe cursor-pointer">
             <Calendar className="w-4 h-4 text-gray-400 dark:text-gray-500" />
             Weekly
             <div className="ml-1">
@@ -49,11 +49,11 @@ export default function SequenceStepActivity() {
               </svg>
             </div>
           </button>
-          <button className="hidden sm:flex items-center gap-2 px-3 py-1.5 border border-gray-200 dark:border-gray-800 rounded-lg text-sm text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-800 cursor-pointer">
+          <button className="hidden sm:flex items-center gap-2 px-3 py-1.5 border border-gray-200 dark:border-gray-800 rounded-lg text-sm text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors focus-ring-safe cursor-pointer">
             <Filter className="w-4 h-4 text-gray-400 dark:text-gray-500" />
             Filter
           </button>
-          <button className="p-1.5 border border-gray-200 dark:border-gray-800 rounded-lg text-gray-400 dark:text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-800 cursor-pointer">
+          <button className="p-1.5 border border-gray-200 dark:border-gray-800 rounded-lg text-gray-400 dark:text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors focus-ring-safe cursor-pointer">
             <MoreHorizontal className="w-4 h-4" />
           </button>
         </div>

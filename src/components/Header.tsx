@@ -4,19 +4,20 @@ import { Button } from './ui/Button';
 
 export default function Header({ onMenuClick }: { onMenuClick?: () => void }) {
   return (
-    <header className="h-16 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 flex items-center justify-between px-4 md:px-6 shrink-0 transition-colors gap-4">
-      <div className="flex items-center gap-2 md:gap-3 min-w-0">
+    <header className="h-16 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-slate-900 flex items-center justify-between px-4 md:px-6 shrink-0 transition-colors gap-4">
+      <div className="flex items-center gap-2 md:gap-3 flex-1 min-w-[44px]">
         <button 
           onClick={onMenuClick}
-          className="lg:hidden p-1.5 border border-gray-200 dark:border-gray-800 rounded-full text-gray-400 dark:text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-800"
+          className="lg:hidden shrink-0 min-w-[44px] min-h-[44px] flex items-center justify-center border border-gray-200 dark:border-gray-800 rounded-full text-gray-400 dark:text-gray-500 hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors focus-ring-safe"
+          aria-label="Open Menu"
         >
-          <Menu className="w-4 h-4" />
+          <Menu className="w-5 h-5" />
         </button>
         <div className="hidden md:flex items-center gap-1 shrink-0">
-          <button className="p-1.5 border border-gray-200 dark:border-gray-800 rounded-full text-gray-400 dark:text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-800 cursor-pointer">
+          <button className="min-w-[44px] min-h-[44px] flex items-center justify-center border border-gray-200 dark:border-gray-800 rounded-full text-gray-400 dark:text-gray-500 hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors focus-ring-safe cursor-pointer" aria-label="Go Back">
             <ArrowLeft className="w-4 h-4" />
           </button>
-          <button className="p-1.5 border border-gray-200 dark:border-gray-800 rounded-full text-gray-300 dark:text-gray-600 transition-colors cursor-not-allowed">
+          <button className="min-w-[44px] min-h-[44px] flex items-center justify-center border border-gray-200 dark:border-gray-800 rounded-full text-gray-300 dark:text-gray-600 transition-colors cursor-not-allowed" aria-label="Go Forward" disabled>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>
@@ -28,9 +29,9 @@ export default function Header({ onMenuClick }: { onMenuClick?: () => void }) {
       </div>
 
       <div className="flex items-center gap-2 md:gap-3 shrink-0">
-        <button className="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 border border-gray-200 dark:border-gray-800 rounded-full text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-900 shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-800 cursor-pointer whitespace-nowrap">
+        <button className="flex items-center gap-2 px-3 py-1.5 min-h-[44px] md:px-4 md:py-2 border border-gray-200 dark:border-gray-800 rounded-full text-sm font-medium hover:bg-gray-50 dark:hover:bg-slate-800 shadow-sm transition-all focus-ring-safe cursor-pointer whitespace-nowrap shrink-0" aria-label="Select Date Range">
           <Calendar className="w-4 h-4 text-gray-400 dark:text-gray-500 shrink-0" />
-          <span className="text-gray-400 dark:text-gray-500 font-normal hidden sm:inline">Date range:</span>
+          <span className="text-gray-400 dark:text-gray-500 font-normal hidden lg:inline">Date range:</span>
           <span className="text-gray-700 dark:text-gray-300 hidden md:inline">May 6, 2026 - June 6, 2026</span>
           <span className="text-gray-700 dark:text-gray-300 md:hidden">May 6 - Jun 6</span>
           <div className="flex flex-col ml-0.5 md:ml-1 opacity-60 shrink-0">
@@ -38,7 +39,7 @@ export default function Header({ onMenuClick }: { onMenuClick?: () => void }) {
             <ChevronDown className="w-[10px] h-[10px] text-gray-500 dark:text-gray-400" strokeWidth={3} />
           </div>
         </button>
-        <Button className="hidden sm:inline-flex whitespace-nowrap">
+        <Button className="hidden md:inline-flex whitespace-nowrap min-h-[44px] shrink-0">
           Upgrade plan
         </Button>
       </div>

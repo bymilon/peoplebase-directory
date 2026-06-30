@@ -34,10 +34,10 @@ const funnelData = [
 
 export default function CommunicationFunnel() {
   return (
-    <div className="chart-container h-full">
+    <div className="chart-container h-full" role="region" aria-label="Funnel chart showing communication conversion rates">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-base font-semibold text-gray-900 dark:text-gray-100">Communication Funnel</h2>
-        <button className="p-1.5 border border-gray-200 dark:border-gray-800 rounded-lg text-gray-400 dark:text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-800 cursor-pointer">
+        <button className="p-1.5 border border-gray-200 dark:border-gray-800 rounded-lg text-gray-400 dark:text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors focus-ring-safe cursor-pointer">
           <MoreHorizontal className="w-4 h-4" />
         </button>
       </div>
