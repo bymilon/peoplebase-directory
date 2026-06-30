@@ -1,5 +1,12 @@
 # PeopleBase Directory
 
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-yellow.svg?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/milonspace)
+[![X Follow](https://img.shields.io/badge/Follow-%40milonspace-black.svg?style=flat&logo=x)](https://x.com/milonspace)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-milonai-0A66C2?logo=linkedin)](https://www.linkedin.com/in/milonai)
+[![Instagram](https://img.shields.io/badge/Instagram-%40withmilon-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/withmilon)
+[![Facebook](https://img.shields.io/badge/Facebook-%40withmilon-1877F2?logo=facebook&logoColor=white)](https://www.facebook.com/withmilon)
+[![Threads](https://img.shields.io/badge/Threads-%40withmilon-000000?logo=threads)](https://www.threads.net/@withmilon)
+
 > A compact React dashboard workspace for people, payroll, HR, reporting, and outreach analytics interfaces.
 
 PeopleBase Directory is a frontend-first dashboard scaffold built with React, Vite, TypeScript, Tailwind CSS, Lucide React, and Recharts. It is designed to be easy for engineers and AI coding agents to inspect, modify, and extend without hiding the product shape behind a large component framework.
